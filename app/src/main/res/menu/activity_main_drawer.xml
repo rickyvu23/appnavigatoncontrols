@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_Assignment"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Assignment" />
+        <item
+            android:id="@+id/nav_Calendar"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_Events"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_Tools"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Tools" />
+        <item
+            android:id="@+id/nav_Manage"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Manage" />
+        <item
+            android:id="@+id/nav_Reports"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Reports" />
+        <item
+            android:id="@+id/nav_Documents"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Documents" />
+        <item
+            android:id="@+id/nav_About"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="About" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+</menu>
