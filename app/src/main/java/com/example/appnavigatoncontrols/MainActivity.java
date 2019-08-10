@@ -2,6 +2,8 @@ package com.example.appnavigatoncontrols;
 
 import android.os.Bundle;
 
+import com.example.appnavigatoncontrols.Controllers.MapFragment;
+import com.example.appnavigatoncontrols.Controllers.ScheduleTypesFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -19,16 +21,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.example.appnavigatoncontrols.Controllers.CalendarFragment;
 import com.example.appnavigatoncontrols.Controllers.ScheduleListFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private static final int[] TAB_Icon = new int[]{android.R.drawable.ic_menu_my_calendar, android.R.drawable.ic_lock_idle_alarm,android.R.drawable.list_selector_background, android.R.drawable.ic_dialog_map};
+    private static final int[] TAB_Icon = new int[]{R.drawable.ic_calendar_white, R.drawable.ic_schedulelist_white,R.drawable.ic_scheduletypes_white, android.R.drawable.ic_dialog_map};
     private static final String TAG = "";
     private SectionsPageAdapter mSectionsPageAdapter;
 
@@ -63,6 +67,7 @@ public class MainActivity extends AppCompatActivity
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -76,8 +81,8 @@ public class MainActivity extends AppCompatActivity
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new CalendarFragment(), "");
         adapter.addFragment(new ScheduleListFragment(), "");
-        adapter.addFragment(new CalendarFragment(), "");
-        adapter.addFragment(new ScheduleListFragment(), "");
+        adapter.addFragment(new ScheduleTypesFragment(), "");
+        adapter.addFragment(new MapFragment(), "");
         //adapter.addFragment(new (), "TAB3");
         viewPager.setAdapter(adapter);
     }
@@ -118,16 +123,18 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         int id = item.getItemId();
 
         if (id == R.id.nav_Calendar) {
-            // Handle the camera action
+            // Handle the calendar action
+            tabs.getTabAt(0).select();
         } else if (id == R.id.nav_Schedules) {
-
+            tabs.getTabAt(1).select();
         } else if (id == R.id.nav_ScheduleTypes) {
-
+            tabs.getTabAt(2).select();
         } else if (id == R.id.nav_Map) {
-
+            tabs.getTabAt(3).select();
         } else if (id == R.id.nav_About) {
 
         } else if (id == R.id.nav_share) {

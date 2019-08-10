@@ -6,23 +6,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_Calendar"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_calendar_black"
             android:title="@string/menu_Calendar" />
         <item
             android:id="@+id/nav_Schedules"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_schedulelist_black"
             android:title="@string/menu_Schedules" />
         <item
             android:id="@+id/nav_ScheduleTypes"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_scheduletypes_black"
             android:title="@string/menu_ScheduleTypes" />
         <item
             android:id="@+id/nav_Map"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@android:drawable/ic_dialog_map"
             android:title="@string/menu_Map" />
         <item
             android:id="@+id/nav_About"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_about_us"
             android:title="About" />
     </group>
 
