@@ -21,11 +21,21 @@
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/lbl_username"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Lam Vu"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/holo_blue_bright" />
+
+    <TextView
+        android:id="@+id/btn_SignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_bright"
+        android:layout_toEndOf="@+id/lbl_username"
+        android:text="@string/sign_out" />
 
 </LinearLayout>

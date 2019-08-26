@@ -2,10 +2,15 @@ package com.example.appnavigatoncontrols.ViewModels;
 
 import androidx.lifecycle.ViewModel;
 
-public class ScheduleTypesViewModel extends ViewModel {
-    public String txt1;
+import com.example.appnavigatoncontrols.Common.ScheduleTypeList;
 
-    public ScheduleTypesViewModel(){
-        txt1 = "text from calendar view model";
+import java.util.ArrayList;
+
+public class ScheduleTypesViewModel extends ViewModel {
+    public ArrayList<ScheduleTypeList> scheduleTypeList;
+
+    public ScheduleTypesViewModel() {
+        scheduleTypeList = new ArrayList<>();
     }
+
 }

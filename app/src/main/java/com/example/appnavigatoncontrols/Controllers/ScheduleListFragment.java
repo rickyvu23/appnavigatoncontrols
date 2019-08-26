@@ -19,7 +19,7 @@ public class ScheduleListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.schedulelist_fragment,container,false);
+        View view = inflater.inflate(R.layout.fragment_schedulelist,container,false);
         ScheduleListViewModel model = new ScheduleListViewModel();
         TextView textView = (TextView) view.findViewById(R.id.txt_schedulelist1);
         textView.setText(model.txt1);

@@ -13,4 +13,5 @@
     <string name="menu_Map">Maps</string>
     <string name="menu_Share">Share</string>
     <string name="menu_Send">Send</string>
+    <string name="sign_out">Sign out</string>
 </resources>

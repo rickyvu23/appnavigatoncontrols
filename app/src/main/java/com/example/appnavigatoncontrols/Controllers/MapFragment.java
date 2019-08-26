@@ -20,7 +20,7 @@ public class MapFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.schedulelist_fragment,container,false);
+        View view = inflater.inflate(R.layout.fragment_map,container,false);
 //        CalendarViewModel model = new CalendarViewModel();
 //        textView = (TextView) view.findViewById(R.id.txt_calendar1);
 //        textView.setText(model.txt1);
